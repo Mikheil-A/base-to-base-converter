@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'binary-to-decimal-converter';
+
+  convert(e) {
+    const inputValue = e['srcElement'].value;
+    console.log((inputValue >>> 0).toString(2));
+
+  }
+
 }
