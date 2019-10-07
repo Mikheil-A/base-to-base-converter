@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BaseToBaseConverter</title>
+
+    <script>
+      /**
+       * A function that can convert a number from one base to another,
+       * where the starting base and the new base are specified as parameters.
+       */
+      const convertFromBaseToBase = (str, fromBase, toBase) => {
+        const initialBaseNum = parseInt(str, fromBase);
+        const finalBaseNum = initialBaseNum.toString(toBase);
+        console.log(finalBaseNum);
+      };
+
+      convertFromBaseToBase(1111, 2, 10);
+      convertFromBaseToBase(15, 10, 2);
+      convertFromBaseToBase('89A4', 16, 2);
+
+
+      const convertDecimalToBinary = () => {
+        const binaryNum = 15;
+        console.log((binaryNum >>> 0).toString(2));
+      };
+      convertDecimalToBinary();
+    </script>
+</head>
+<body>
+</body>
+</html>
